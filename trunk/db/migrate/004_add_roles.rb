@@ -1,0 +1,20 @@
+class AddRoles < ActiveRecord::Migration
+  def self.up
+    create_table :roles, :force => true do |t|
+        t.column :title, :string
+    end
+
+    create_table :roles_users, :id => false, :force => true do |t|
+      t.column :role_id, :integer
+      t.column :user_id, :integer
+    end
+    Role.create(:title => 'admin')
+    Role.create(:title => 'employee')
+    Role.create(:title => 'user')
+  end
+
+  def self.down
+    drop_table :roles
+    drop_table :roles_users
+  end
+end

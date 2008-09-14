@@ -1,6 +1,11 @@
 class ProductsController < ApplicationController
   # GET /products
   # GET /products.xml
+  
+  before_filter :login_required
+  #access_rule 'admin || employee || user', :only =>  [:update, :vote]
+  #access_rule 'admin', :only =>  [:show, :edit, :destroy]
+    
   def index
     @products = Product.find(:all)
 
@@ -41,17 +46,13 @@ class ProductsController < ApplicationController
   # POST /products.xml
   def create
     @product = Product.new(params[:product])
-
-    respond_to do |format|
       if @product.save
-        flash[:notice] = 'Product was successfully created.'
-        format.html { redirect_to(@product) }
-        format.xml  { render :xml => @product, :status => :created, :location => @product }
+        flash[:notice] = 'Video has been uploaded'
+        redirect_to :action => 'index'
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @product.errors, :status => :unprocessable_entity }
       end
-    end
   end
 
   # PUT /products/1

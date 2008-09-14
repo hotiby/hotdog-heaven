@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/railscasts_railscasts/!svn/ver/8/lib/paperclip
+END
+iostream.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/railscasts_railscasts/!svn/ver/8/lib/paperclip/iostream.rb
+END
+thumbnail.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/railscasts_railscasts/!svn/ver/8/lib/paperclip/thumbnail.rb
+END
+storage.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/railscasts_railscasts/!svn/ver/8/lib/paperclip/storage.rb
+END
+upfile.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/railscasts_railscasts/!svn/ver/8/lib/paperclip/upfile.rb
+END
+attachment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/railscasts_railscasts/!svn/ver/8/lib/paperclip/attachment.rb
+END
+geometry.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/railscasts_railscasts/!svn/ver/8/lib/paperclip/geometry.rb
+END

@@ -19,6 +19,7 @@ img { border: 0; }
 #content { margin: 10px auto; width: 960px; }
 #logo { margin: 0 0 10px 0; }
 #slogan { font-size: 0.9em; margin: 0 0 10px 2px; padding: 0; color: #808080; background: #fff; }
+.login{ font-size: 14px;}
 #top_info { line-height: 27px; float: right; color: #808080; background: #fff; margin: 12px 5px 7px 0; text-align: right; height: 74px; }
 
 /* round blue login button */

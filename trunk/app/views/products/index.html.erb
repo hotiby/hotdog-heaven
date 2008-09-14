@@ -1,7 +1,8 @@
-<h1>Listing products</h1>
-
+<div class="left_articles">
+	<h2>Our Products</h2>
 <table>
   <tr>
+	  <th></th>
     <th>Title</th>
     <th>Price</th>
     <th>Quantity</th>
@@ -10,17 +11,22 @@
 
 <% for product in @products %>
   <tr>
+		<td><%= image_tag product.photo.url(:thumb) %></td>
     <td><%=h product.title %></td>
     <td><%=h product.price %></td>
     <td><%=h product.quantity %></td>
     <td><%=h product.total_available %></td>
+	  <% restrict_to 'admin' do %>
     <td><%= link_to 'Show', product %></td>
     <td><%= link_to 'Edit', edit_product_path(product) %></td>
     <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
+<% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
-
+<% restrict_to 'admin' do %>
 <%= link_to 'New product', new_product_path %>
+<% end %>
+</div>

@@ -1,27 +1,34 @@
-<h1>New product</h1>
+<div id="background">
+	<h1 id="">	<p>Adding Products....</p></h1>
+	
+	<p>
+Welcome to the product page. This will be the place you enter in new products the company will sell. The image will be automatically sized down to the proper size. The quantity is the initial amount that we have of the product. </p>
+</div>
 
-<% form_for(@product) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :price %><br />
-    <%= f.text_field :price %>
-  </p>
-  <p>
-    <%= f.label :quantity %><br />
-    <%= f.text_field :quantity %>
-  </p>
-  <p>
-    <%= f.label :total_available %><br />
-    <%= f.text_field :total_available %>
-  </p>
-  <p>
-    <%= f.submit "Create" %>
-  </p>
+<% form_for :product,  :url => 'create',  :html => { :multipart => true } do |f| %>
+			<div id="newFormTop">
+				<p>
+				<%= f.file_field :photo %>
+				</p>
+				<p>
+			    <%= f.label :title %><br />
+			    <%= f.text_field :title %>
+			  </p>
+			  <p>
+			    <%= f.label :price %><br />
+			    <%= f.text_field :price %>
+			  </p>
+			  <p>
+			    <%= f.label :quantity %><br />
+			    <%= f.text_field :quantity %>
+			  </p>
+			  <p>
+			    <%= f.label :total_available %><br />
+			    <%= f.text_field :total_available %>
+			  </p>
+			</div>
+			<div id="newFormRight">
+				<%= f.submit "Upload" %>
+			</div>
+			<div class="clear"></div>
 <% end %>
-
-<%= link_to 'Back', products_path %>

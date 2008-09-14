@@ -9,15 +9,42 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 1) do
+ActiveRecord::Schema.define(:version => 4) do
 
   create_table "products", :force => true do |t|
     t.string   "title"
-    t.integer  "price",           :limit => 10, :precision => 10, :scale => 0
-    t.integer  "quantity",        :limit => 11
-    t.integer  "total_available", :limit => 11
+    t.integer  "price",              :limit => 10, :precision => 10, :scale => 0
+    t.integer  "quantity"
+    t.integer  "total_available"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+  end
+
+  create_table "roles", :force => true do |t|
+    t.string "title"
+  end
+
+  create_table "roles_users", :id => false, :force => true do |t|
+    t.integer "role_id"
+    t.integer "user_id"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "login"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "crypted_password",          :limit => 40
+    t.string   "salt",                      :limit => 40
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "remember_token"
+    t.datetime "remember_token_expires_at"
+    t.string   "activation_code",           :limit => 40
+    t.datetime "activated_at"
   end
 
 end
