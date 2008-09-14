@@ -1,0 +1,28 @@
+<p>
+  <b>Date:</b>
+  <%=h @daily.date %>
+</p>
+
+<p>
+  <b>Total:</b>
+  <%=h @daily.total %>
+</p>
+
+<p>
+  <b>Foodcost:</b>
+  <%=h @daily.foodcost %>
+</p>
+
+<p>
+  <b>Hours:</b>
+  <%=h @daily.hours %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @daily.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_daily_path(@daily) %> |
+<%= link_to 'Back', dailies_path %>

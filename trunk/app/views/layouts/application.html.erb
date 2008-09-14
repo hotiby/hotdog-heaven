@@ -6,6 +6,8 @@
   <meta name="description" content="description" />
   <meta name="keywords" content="keywords"/>
   <meta name="googlebot" content="noodp" />
+	<%= javascript_include_tag :defaults %>
+	<%= calendar_date_select_includes %>
   <%= stylesheet_link_tag 'application' %>
 </head>
 <body>
@@ -62,18 +64,8 @@
 							
 		<div id="left">
 			 <%= yield %>
-			<div class="left_box">
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.</p>
-			</div>
-			<div class="thirds">
-				<p><b><a href="#" class="title">Web 2.0 business startup tips</a></b><br />Lorem ipsum dolor sit amet esta pa, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci. <a href="#"><img src="/images/comment.gif" alt="Comment" /></a></p>
-			</div>
-			<div class="thirds">
-				<p><b><a href="http://andreasviklund.com/templates/" class="title">Visualize your website</a></b><br />Lorem ipsum dolor sit amet esta pa, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci. <a href="#"><img src="/images/comment.gif" alt="Comment" /></a></p>
-			</div>
-			<div class="thirds">
-				<p><b><a href="http://snews.solucija.com/" class="title">Manage your content</a></b><br />Lorem ipsum dolor sit amet esta pa, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci. <a href="#"><img src="/images/comment.gif" alt="Comment" /></a></p>
-			</div>
+
+	
 		</div>	
 		
 		<div id="right">

@@ -1,0 +1,40 @@
+<div id="background">
+	<h1 id="">	<p>Daily Entry</p></h1>
+	
+	<p>To learn more about how we can help your project succeed, please fill out the 
+		 form below. We will respond to your message within 24 hours. </p>
+</div>
+
+		<% form_for(@daily) do |f| %>
+  		<%= f.error_messages %>
+			<div id="formLeft">
+				<br />
+				<%= f.label :name %><br />
+				<div class="input-bg">
+					<%= f.text_field :name, :class => 'required' %>
+				</div>
+			
+		    <%= f.label :total %><br />
+				<div class="input-bg">
+					<%= f.text_field :total, :class => 'required' %>
+				</div>
+				
+				<%= f.label :hours %><br />
+				<div class="input-bg">
+					<%= f.text_field :hours, :class => 'required' %>
+				</div>
+				
+			</div>
+			
+			<div id="formRight">
+				<label for="Message">Date:</label></td>
+					<%= calendar_date_select_tag "date", nil, :embedded => true, :time => :mixed %>
+				</div>
+
+				<br />
+				<div class="input-bg">
+					<label for="Message"></label></td>
+			    <%= f.submit "Enter Day" %>
+			</div>
+<% end %>
+

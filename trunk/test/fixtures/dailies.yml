@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  date: 2008-09-14 17:57:59
+  total: 9.99
+  foodcost: 9.99
+  hours: 9.99
+  name: MyString
+
+two:
+  date: 2008-09-14 17:57:59
+  total: 9.99
+  foodcost: 9.99
+  hours: 9.99
+  name: MyString

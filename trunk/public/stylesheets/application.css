@@ -1,7 +1,124 @@
-/*
-	project: hotdog Heaven 
+#background {
+	font-family:Georgia,serif;
+	font-size:123.5%;
+	margin-right:229px;
+	margin-left:28px;
 	
-*/
+}
+#background h1{
+	font-family:"trebuchet ms", helvetica, sans-serif;
+	font-size:144.5%;
+	margin-left:2px;
+}
+.clear {
+	clear:both;
+}
+
+fieldset {
+	border:medium none;
+}
+input, textarea, a {
+	outline-color:invert;
+	outline-style:none;
+	outline-width:medium;
+}
+#page-wrap {
+	background:transparent url(/images/form-bg.jpg) no-repeat scroll center top;
+	margin:0pt auto;
+	min-height:600px;
+	width:800px;
+}
+form {
+	padding:0px 0pt 0pt 25px;
+}
+
+#newFormRight{
+	padding-bottom: 17px;
+	font-size:1.4em;
+	margin:13px;
+}
+#newFormTop{
+	padding-bottom: 0px;
+	font-size:1.4em;
+	margin:13px;
+}
+
+#formLeft {
+	float:left;
+	width:320px;
+}
+#formLeft input {
+	background:transparent none repeat scroll 0%;
+	border:medium none;
+	font-size:1.4em;
+	margin:13px 0pt 0pt 8px;
+	text-align:center;
+	width:250px;
+}
+input#remember_me {
+	background:transparent none repeat scroll 0%;
+	border:medium none;
+	font-size:1.4em;
+	margin:13px 0pt 0pt 8px;
+	text-align:center;
+	width:45px;
+}
+#formLeft .input-bg {
+	background:transparent url(/images/form-sm-bg.jpg) no-repeat scroll left bottom;
+	height:45px;
+	margin-bottom:10px;
+	position:relative;
+}
+#formLeft .active {
+	background:transparent url(/images/form-sm-bg.jpg) no-repeat scroll left top;
+}
+#formRight {
+	float:right;
+	padding-right:11px;
+	width:260px;
+}
+#formRight textarea {
+	background:transparent none repeat scroll 0%;
+	border:medium none;
+	display:block;
+	font-size:1.4em;
+	height:209px;
+	margin:0pt 0pt 0pt 20px;
+	padding:13px 0pt;
+	width:298px;
+}
+#formRight .message-bg {
+	background:transparent url(/images/message-bg.jpg) no-repeat scroll left bottom;
+	height:238px;
+}
+#formRight .active {
+	background:transparent url(/images/message-bg.jpg) no-repeat scroll left top;
+}
+#button {
+	position:absolute;
+	left:59px;
+	top:504px;
+}
+
+.error {                      
+	background: #fff088;
+	border: 1px solid #c6a505;
+	font-weight: bold;
+	padding: 7px;
+	margin-bottom: 7px;
+}             
+.notice {                     
+	background: #dbf386;
+	border: 1px solid #88a500;
+	font-weight: bold;
+	padding: 7px;
+	margin-bottom: 7px;
+}
+#button_for_new {
+	position:absolute;
+	left:200px;
+	top:329px;
+}
    
 /* default styles */
 body { padding: 5px 0 0 0; margin: 0; font: .7em Tahoma, Arial, sans-serif; line-height: 1.7em; background: #fff url(/images/bg.gif) repeat-x; color: #454545; }
@@ -72,8 +189,8 @@ img { border: 0; }
 	height: 25px;	/* IE height */
 	width: 270px;
 }
-	/* search form styling */
-	form, form p { margin: 0; padding: 0; line-height: 25px; }
+	/* search form styling 
+	form, form p { margin: 0; padding: 0; line-height: 25px; }*/
 	
 		.search { width: 170px; border: 1px solid #357994; background: #fff; color: #478F36; padding: 4px; margin: 0; font-weight: bold; font-size: 1.3em;  }
 		.button { padding: 4px; font: bold 1em Arial, Sans-Serif; }
@@ -85,6 +202,14 @@ img { border: 0; }
 	margin: 0 0 10px 0;
 }
 	.subheader {
+		margin: 0 0 10px 0;
+		padding: 8px;
+		background: #f4f4f4 url(/images/bgshade.gif) repeat-x;
+		color: #808080;
+		border-bottom: 1px solid #ccc;
+	}
+	.subdaily {
+		float: right;
 		margin: 0 0 10px 0;
 		padding: 8px;
 		background: #f4f4f4 url(/images/bgshade.gif) repeat-x;

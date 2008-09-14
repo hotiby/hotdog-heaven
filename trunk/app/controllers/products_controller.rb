@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
   before_filter :login_required
   #access_rule 'admin || employee || user', :only =>  [:update, :vote]
   #access_rule 'admin', :only =>  [:show, :edit, :destroy]
-    
+  access_rule 'admin', :only => :show
   def index
     @products = Product.find(:all)
 

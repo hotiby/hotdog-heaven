@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/ads_edgeracing/!svn/ver/499/trunk/vendor/plugins/calendar_date_select/public/javascripts/calendar_date_select
+END
+calendar_date_select.js
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/ads_edgeracing/!svn/ver/499/trunk/vendor/plugins/calendar_date_select/public/javascripts/calendar_date_select/calendar_date_select.js
+END
+format_finnish.js
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/ads_edgeracing/!svn/ver/499/trunk/vendor/plugins/calendar_date_select/public/javascripts/calendar_date_select/format_finnish.js
+END
+format_american.js
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/ads_edgeracing/!svn/ver/499/trunk/vendor/plugins/calendar_date_select/public/javascripts/calendar_date_select/format_american.js
+END
+format_italian.js
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/ads_edgeracing/!svn/ver/499/trunk/vendor/plugins/calendar_date_select/public/javascripts/calendar_date_select/format_italian.js
+END
+format_db.js
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/ads_edgeracing/!svn/ver/499/trunk/vendor/plugins/calendar_date_select/public/javascripts/calendar_date_select/format_db.js
+END
+format_hyphen_ampm.js
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/ads_edgeracing/!svn/ver/499/trunk/vendor/plugins/calendar_date_select/public/javascripts/calendar_date_select/format_hyphen_ampm.js
+END
+format_iso_date.js
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/ads_edgeracing/!svn/ver/499/trunk/vendor/plugins/calendar_date_select/public/javascripts/calendar_date_select/format_iso_date.js
+END
+format_euro_24hr.js
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/ads_edgeracing/!svn/ver/499/trunk/vendor/plugins/calendar_date_select/public/javascripts/calendar_date_select/format_euro_24hr.js
+END

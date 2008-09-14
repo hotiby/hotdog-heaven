@@ -1,0 +1,73 @@
+8
+
+dir
+1041
+http://ads.unfuddle.com/svn/ads_edgeracing/trunk/vendor/plugins/calendar_date_select/js_test
+http://ads.unfuddle.com/svn/ads_edgeracing
+
+
+
+2008-04-15T23:35:31.222780Z
+499
+ads_matt
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3fbc148f-1fd6-4d76-b758-0ad28c8591f4
+
+unit
+dir
+
+prototype.js
+file
+
+
+
+
+2008-04-15T19:01:05.000000Z
+bab4179aef164e96e866b03ac432bdf7
+2008-04-15T23:35:31.222780Z
+499
+ads_matt
+has-props
+
+functional
+dir
+
+test.css
+file
+
+
+
+
+2008-04-15T19:01:05.000000Z
+6af47889ae7a0b27c22f5df44db7ae0a
+2008-04-15T23:35:31.222780Z
+499
+ads_matt
+has-props
+
+unittest.js
+file
+
+
+
+
+2008-04-15T19:01:06.000000Z
+934da23c6f8f0fac0a01bc7bf05ebb98
+2008-04-15T23:35:31.222780Z
+499
+ads_matt
+has-props
+

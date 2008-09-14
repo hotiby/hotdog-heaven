@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :dailies
+
   map.resources :users
 
   map.resource :session

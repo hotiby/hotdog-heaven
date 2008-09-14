@@ -9,7 +9,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 4) do
+ActiveRecord::Schema.define(:version => 5) do
+
+  create_table "dailies", :force => true do |t|
+    t.datetime "date"
+    t.integer  "total",      :limit => 10, :precision => 10, :scale => 0
+    t.integer  "foodcost",   :limit => 10, :precision => 10, :scale => 0
+    t.integer  "hours",      :limit => 10, :precision => 10, :scale => 0
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "products", :force => true do |t|
     t.string   "title"

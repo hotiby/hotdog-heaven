@@ -1,0 +1,32 @@
+<h1>Editing daily</h1>
+
+<% form_for(@daily) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :date %><br />
+    <%= f.datetime_select :date %>
+  </p>
+  <p>
+    <%= f.label :total %><br />
+    <%= f.text_field :total %>
+  </p>
+  <p>
+    <%= f.label :foodcost %><br />
+    <%= f.text_field :foodcost %>
+  </p>
+  <p>
+    <%= f.label :hours %><br />
+    <%= f.text_field :hours %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @daily %> |
+<%= link_to 'Back', dailies_path %>

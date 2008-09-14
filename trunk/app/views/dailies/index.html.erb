@@ -1,0 +1,28 @@
+<h1>Listing dailies</h1>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Total</th>
+    <th>Foodcost</th>
+    <th>Hours</th>
+    <th>Name</th>
+  </tr>
+
+<% for daily in @dailies %>
+  <tr>
+    <td><%=h daily.date %></td>
+    <td><%=h daily.total %></td>
+    <td><%=h daily.foodcost %></td>
+    <td><%=h daily.hours %></td>
+    <td><%=h daily.name %></td>
+    <td><%= link_to 'Show', daily %></td>
+    <td><%= link_to 'Edit', edit_daily_path(daily) %></td>
+    <td><%= link_to 'Destroy', daily, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New daily', new_daily_path %>

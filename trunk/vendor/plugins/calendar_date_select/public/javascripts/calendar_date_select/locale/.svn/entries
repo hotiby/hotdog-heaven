@@ -1,0 +1,54 @@
+8
+
+dir
+1041
+http://ads.unfuddle.com/svn/ads_edgeracing/trunk/vendor/plugins/calendar_date_select/public/javascripts/calendar_date_select/locale
+http://ads.unfuddle.com/svn/ads_edgeracing
+
+
+
+2008-04-15T23:35:31.222780Z
+499
+ads_matt
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+3fbc148f-1fd6-4d76-b758-0ad28c8591f4
+
+pl.js
+file
+
+
+
+
+2008-04-15T19:01:08.000000Z
+11c575621d8e294c218c28ec80c55a46
+2008-04-15T23:35:31.222780Z
+499
+ads_matt
+has-props
+
+fi.js
+file
+
+
+
+
+2008-04-15T19:01:08.000000Z
+90413621ee3355fb1f3a282f28d1224b
+2008-04-15T23:35:31.222780Z
+499
+ads_matt
+has-props
+
