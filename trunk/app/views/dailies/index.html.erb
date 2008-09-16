@@ -1,4 +1,7 @@
-<h1>Listing dailies</h1>
+	<h1 id="">	<p>Daily Entries</p></h1>
+	
+	<p>To learn more about how we can help your project succeed, please fill out the 
+		 form below. We will respond to your message within 24 hours. </p>
 
 <table>
   <tr>
@@ -11,7 +14,7 @@
 
 <% for daily in @dailies %>
   <tr>
-    <td><%=h daily.date %></td>
+    <td><%=h daily.date.strftime("%B %d, %Y") if daily.date %></td>
     <td><%=h daily.total %></td>
     <td><%=h daily.foodcost %></td>
     <td><%=h daily.hours %></td>
@@ -24,5 +27,4 @@
 </table>
 
 <br />
-
-<%= link_to 'New daily', new_daily_path %>
+<%= link_to 'Enter a New Day', new_daily_path %>

@@ -1,0 +1,2 @@
+# update the cart contents
+page.replace_html("cart_bar", :partial => "products/day", :object => @day, :object => @items)

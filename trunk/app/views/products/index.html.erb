@@ -1,5 +1,6 @@
-<div class="left_articles">
-	<h2>Our Products</h2>
+
+	<h1 id="">	<p>Our Products</p></h1>
+
 <table>
   <tr>
 	  <th></th>
@@ -16,7 +17,7 @@
     <td><%=h product.price %></td>
     <td><%=h product.quantity %></td>
     <td><%=h product.total_available %></td>
-	  <% restrict_to 'admin' do %>
+	  <% restrict_to 'employee' do %>
     <td><%= link_to 'Show', product %></td>
     <td><%= link_to 'Edit', edit_product_path(product) %></td>
     <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -29,4 +30,3 @@
 <% restrict_to 'admin' do %>
 <%= link_to 'New product', new_product_path %>
 <% end %>
-</div>

@@ -9,11 +9,22 @@ class DailiesController < ApplicationController
       format.xml  { render :xml => @dailies }
     end
   end
+  
+  def create_product
+    @product = Product.find_by_title(params[:products])
+    @comment = @daily.products.build(params[:comment])
+    @comment.user_id = current_user.id if logged_in?
+    @comment.save if params[:form_action] == 'save'
+    respond_to do |format|
+      format.js
+    end
+  end
 
   # GET /dailies/1
   # GET /dailies/1.xml
   def show
     @daily = Daily.find(params[:id])
+    @products = Product.find(:all)#.map{|role| role.title}
 
     respond_to do |format|
       format.html # show.html.erb
@@ -41,10 +52,9 @@ class DailiesController < ApplicationController
   # POST /dailies.xml
   def create
     @daily = Daily.new(params[:daily])
-
+    @daily.date = params[:date]
     respond_to do |format|
       if @daily.save
-        flash[:notice] = 'Daily was successfully created.'
         format.html { redirect_to(@daily) }
         format.xml  { render :xml => @daily, :status => :created, :location => @daily }
       else

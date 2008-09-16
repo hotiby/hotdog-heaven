@@ -1,9 +1,7 @@
-<div id="background">
-	<h1 id="">	<p>Daily Entry</p></h1>
+	<h1 id="">	<p>Adding Products....</p></h1>
 	
-	<p>To learn more about how we can help your project succeed, please fill out the 
-		 form below. We will respond to your message within 24 hours. </p>
-</div>
+	<p>
+Welcome to the product page. This will be the place you enter in new products the company will sell. The image will be automatically sized down to the proper size. The quantity is the initial amount that we have of the product. </p>
 
 		<% form_for(@daily) do |f| %>
   		<%= f.error_messages %>
@@ -28,11 +26,11 @@
 			
 			<div id="formRight">
 				<label for="Message">Date:</label></td>
-					<%= calendar_date_select_tag "date", nil, :embedded => true, :time => :mixed %>
+					<%= calendar_date_select_tag "date", nil, :prefix => 'daily', :embedded => true, :time => :mixed %>
 				</div>
 
 				<br />
-				<div class="input-bg">
+				<div class="button">
 					<label for="Message"></label></td>
 			    <%= f.submit "Enter Day" %>
 			</div>

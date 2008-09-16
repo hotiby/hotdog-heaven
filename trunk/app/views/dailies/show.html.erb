@@ -1,28 +1,31 @@
-<p>
-  <b>Date:</b>
-  <%=h @daily.date %>
-</p>
-
-<p>
-  <b>Total:</b>
-  <%=h @daily.total %>
-</p>
-
-<p>
-  <b>Foodcost:</b>
-  <%=h @daily.foodcost %>
-</p>
-
-<p>
-  <b>Hours:</b>
-  <%=h @daily.hours %>
-</p>
-
-<p>
-  <b>Name:</b>
-  <%=h @daily.name %>
-</p>
-
-
-<%= link_to 'Edit', edit_daily_path(@daily) %> |
-<%= link_to 'Back', dailies_path %>
+	<h1 id="">	<p>Products sold for <%= @daily.date.strftime("%B %d, %Y") %> </p></h1>
+	
+	<p>Please enter the products sold for <%= @daily.date.strftime("%B %d, %Y") %>. Enter the approximate amount sold for each item. The yellow add and subtract buttons will add ten at a time to help speed the process. Once complete enter the Finalize Day button.</p>
+		<div id="right">
+				<div id="cart">		 
+					<b>These are the items sold for <%= @daily.date.strftime("%b %d, %Y") %></b>
+					<div id="cart_bar">
+						<p>test me</p>
+						<p>test me</p>
+						
+					</div>
+				</div>
+		</div>
+		<% for product in @products %>
+		<div class="right_articles">
+				<p><%= image_tag(product.photo.url(:small), :class => "image") %>
+				<% form_remote_tag :url => add_to_cart_path(:daily => @daily.id, :quantity => 1, :id => product.id), :html => {:class => "image"} do %>
+				  <%= image_submit_tag('add.gif') %>
+				<% end %>
+				<% form_remote_tag :url => add_to_cart_path(:daily => @daily.id, :quantity => 10, :id => product.id), :html => {:class => "image"} do %>
+				  <%= image_submit_tag('add10.gif') %>
+				<% end %>
+			</p><b><span class="bigger"><%= product.title %></span></b><br />
+		<p>		<% form_remote_tag :url => remove_from_cart_path(:daily => @daily.id, :quantity => 1, :id => product.id), :html => {:class => "image"} do %>
+			  <%= image_submit_tag('remove.gif') %>
+			<% end %>
+	<% form_remote_tag :url => remove_from_cart_path(:daily => @daily.id, :quantity => 10, :id => product.id), :html => {:class => "image"} do %>
+				  <%= image_submit_tag('remove10.gif') %>
+			<% end %></p>
+			</div>
+				<% end %>

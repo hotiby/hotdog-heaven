@@ -1,17 +1,8 @@
-<h1>Editing product</h1>
+<h1>Editing (<%= @product.title %>) quantity</h1>
 
 <% form_for(@product) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </p>
-  <p>
-  <p>
-    <%= f.label :price %><br />
-    <%= f.text_field :price %>
-  </p>
   <p>
     <%= f.label :quantity %><br />
     <%= f.text_field :quantity %>

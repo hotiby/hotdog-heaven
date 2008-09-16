@@ -1,11 +1,11 @@
 class CreateProducts < ActiveRecord::Migration
   def self.up
     create_table :products do |t|
-      t.string :title
+      t.string  :title
       t.decimal :price
       t.integer :quantity
       t.integer :total_available
-
+      t.text    :description
       t.timestamps
     end
   end

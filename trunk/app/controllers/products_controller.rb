@@ -14,6 +14,30 @@ class ProductsController < ApplicationController
       format.xml  { render :xml => @products }
     end
   end
+  
+  def add
+    product = Product.find(params[:id]) if params[:id]
+    @items = Entry.find_all_by_daily_id(params[:daily].to_i)
+    product.add(@items, params[:daily].to_i, product, params[:quantity].to_i)
+    product.save
+    @day = Daily.find(params[:daily].to_i)
+    respond_to do |format|
+      format.js do
+        render :partial => "add_to_day"
+      end
+    end
+  end
+  
+  def remove
+    @product = Product.find(params[:id]) if params[:id]
+    @product.remove(params[:daily].to_i, product, params[:quantity].to_i)
+    @product.save
+    respond_to do |format|
+      format.js do
+        render :partial => "add_to_day"
+      end
+    end
+  end
 
   # GET /products/1
   # GET /products/1.xml

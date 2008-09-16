@@ -1,0 +1,13 @@
+
+<% form_remote_for :product, product, :url => { :action => 'create_product'}, 
+  :html => { :method => :post, :id => 'new_product_form', :name => 'new_product_form' } do |f| %>  
+  <div>
+		<%= select_tag "products", options_for_select(@products) %></p>
+  </div>
+  <div>
+    <%= f.text_field :quantity %>
+  </div>
+  
+  <%= hidden_field_tag 'form_action', 'preview', :id => 'form_action' %>
+  <%= submit_tag "Submit Product" %></p>
+<% end %>

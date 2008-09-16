@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 5) do
+ActiveRecord::Schema.define(:version => 6) do
 
   create_table "dailies", :force => true do |t|
     t.datetime "date"
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(:version => 5) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "entries", :force => true do |t|
+    t.integer "daily_id"
+    t.integer "product_id"
+    t.integer "quantity"
+    t.integer "price",      :limit => 10, :precision => 10, :scale => 0
   end
 
   create_table "products", :force => true do |t|
@@ -31,15 +38,12 @@ ActiveRecord::Schema.define(:version => 5) do
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
+    t.integer  "daily_id"
+    t.text     "description"
   end
 
   create_table "roles", :force => true do |t|
     t.string "title"
-  end
-
-  create_table "roles_users", :id => false, :force => true do |t|
-    t.integer "role_id"
-    t.integer "user_id"
   end
 
   create_table "users", :force => true do |t|
