@@ -1,5 +1,6 @@
-  <%# cart item starts here %>
-  <%  @items.each do |item| %>
-<p><%= item.product.title %>--------------------<%= item.quantity %>--</p>
-	<% end %>
+	  <%# cart item starts here %>
+	  <%  @items.each do |item| %>
+	<div class="each_item"><%= item.product.title %> <em class="number_icon"><%= item.quantity %></em></div>
+
+		<% end %>
 

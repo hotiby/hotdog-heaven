@@ -46,6 +46,11 @@ ActiveRecord::Schema.define(:version => 6) do
     t.string "title"
   end
 
+  create_table "roles_users", :id => false, :force => true do |t|
+    t.integer "role_id"
+    t.integer "user_id"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "login"
     t.string   "first_name"

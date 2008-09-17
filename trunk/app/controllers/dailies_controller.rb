@@ -25,6 +25,7 @@ class DailiesController < ApplicationController
   def show
     @daily = Daily.find(params[:id])
     @products = Product.find(:all)#.map{|role| role.title}
+    @items = Entry.find_all_by_daily_id(params[:id].to_i)
 
     respond_to do |format|
       format.html # show.html.erb

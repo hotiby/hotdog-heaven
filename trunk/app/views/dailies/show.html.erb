@@ -1,13 +1,11 @@
-	<h1 id="">	<p>Products sold for <%= @daily.date.strftime("%B %d, %Y") %> </p></h1>
+	<h1 id="">	<p>Products sold for <%= @daily.date.strftime("%A") %> <%= @daily.date.strftime("%B %d, %Y") %> </p></h1>
 	
 	<p>Please enter the products sold for <%= @daily.date.strftime("%B %d, %Y") %>. Enter the approximate amount sold for each item. The yellow add and subtract buttons will add ten at a time to help speed the process. Once complete enter the Finalize Day button.</p>
 		<div id="right">
 				<div id="cart">		 
 					<b>These are the items sold for <%= @daily.date.strftime("%b %d, %Y") %></b>
 					<div id="cart_bar">
-						<p>test me</p>
-						<p>test me</p>
-						
+						<%= render :partial => "products/day", :object => @items %>
 					</div>
 				</div>
 		</div>

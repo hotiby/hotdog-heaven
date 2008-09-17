@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   # GET /products
   # GET /products.xml
-  
+  caches_action :index, :for => 1.hour
   before_filter :login_required
   #access_rule 'admin || employee || user', :only =>  [:update, :vote]
   #access_rule 'admin', :only =>  [:show, :edit, :destroy]
@@ -20,6 +20,8 @@ class ProductsController < ApplicationController
     @items = Entry.find_all_by_daily_id(params[:daily].to_i)
     product.add(@items, params[:daily].to_i, product, params[:quantity].to_i)
     product.save
+    @items = Entry.find_all_by_daily_id(params[:daily].to_i)
+    
     @day = Daily.find(params[:daily].to_i)
     respond_to do |format|
       format.js do
@@ -29,9 +31,11 @@ class ProductsController < ApplicationController
   end
   
   def remove
-    @product = Product.find(params[:id]) if params[:id]
-    @product.remove(params[:daily].to_i, product, params[:quantity].to_i)
-    @product.save
+    product = Product.find(params[:id]) if params[:id]
+    product.remove(params[:daily].to_i, product, params[:quantity].to_i)
+    product.save
+    @items = Entry.find_all_by_daily_id(params[:daily].to_i)
+    @day = Daily.find(params[:daily].to_i)
     respond_to do |format|
       format.js do
         render :partial => "add_to_day"

@@ -27,6 +27,7 @@ class Product < ActiveRecord::Base
      if !exists
        day.entries.create(:quantity => quantity, :product => object)
      end
+     return items
    end
    
    

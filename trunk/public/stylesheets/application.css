@@ -1,3 +1,58 @@
+
+.fieldWithErrors {
+  padding: 2px;
+  display: table;
+}
+
+#errorExplanation {
+  width: 600px;
+  border: 2px solid #71a4ba;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #71a4ba;
+  color: #fff;
+  text-align: center;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+  text-align: left;
+}
+
+#errorExplanation ul li {
+  font-size: 13px;
+  list-style: square inside;
+  text-align: left;
+  color: red;
+}
+.number_icon{ 
+	font-size:120%;
+	float: right;
+	width: 30px;
+}
+
+.text_icon{ 
+	float: left;
+	width: 40px;
+}
+
+.each_item{
+	height:35px;
+	
+}
+
 #background {
 	font-family:Georgia,serif;
 	font-size:123.5%;
@@ -163,7 +218,7 @@ img { border: 0; }
 	#tablist li a.current{
 		background: #9FC7D8 url(/images/corner.gif) no-repeat top right;
 		color: #2F637A;
-		padding: 6px 22px;
+		padding: 6px 22px 22px 22px;
 	}
 	#tablist .key { text-decoration: underline; }
 

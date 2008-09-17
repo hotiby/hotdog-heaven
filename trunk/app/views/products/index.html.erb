@@ -17,7 +17,7 @@
     <td><%=h product.price %></td>
     <td><%=h product.quantity %></td>
     <td><%=h product.total_available %></td>
-	  <% restrict_to 'employee' do %>
+	  <% restrict_to 'admin' do %>
     <td><%= link_to 'Show', product %></td>
     <td><%= link_to 'Edit', edit_product_path(product) %></td>
     <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
